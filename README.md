@@ -1,6 +1,6 @@
 # CP4 - IoT e Mineração de Dados
 
-## 📌 Descrição
+## Descrição
 
 Este repositório contém as atividades desenvolvidas no **Checkpoint 4**
 da disciplina, abordando análise de consumo energético doméstico
@@ -8,7 +8,52 @@ utilizando **Python (Parte 3)** e **Orange Data Mining (Parte 4)**.
 
 ------------------------------------------------------------------------
 
-## 📊 Parte 3 --- Appliances Energy Prediction (Python)
+## Parte 1 – Exercícios iniciais com *Individual Household Electric Power Consumption*
+
+Nesta seção, foi analisado o dataset **Individual Household Electric Power Consumption**, com foco em entender padrões de consumo de energia elétrica residencial.  
+
+### Principais etapas:
+- Carregamento e inspeção inicial dos dados.  
+- Tratamento de valores ausentes.  
+- Conversão de colunas de data e criação de variáveis temporais (dia da semana, mês).  
+- Análise do consumo médio diário e mensal, comparação entre dias úteis e finais de semana.  
+- Visualização de séries temporais e histogramas para variáveis como `Global_active_power` e `Voltage`.  
+- Cálculo de correlação entre variáveis elétricas.  
+- Criação da variável `Total_Sub_metering` (soma dos submedidores).  
+- Identificação do dia de maior consumo.  
+- Normalização (Min-Max Scaling) das variáveis principais.  
+- **Clustering** com K-Means para segmentar dias com base no consumo.  
+- Decomposição de série temporal de `Global_active_power` (tendência, sazonalidade e resíduos).  
+- Modelo de Regressão Linear simples para prever `Global_active_power` a partir de `Global_intensity`.  
+- Análise horária para identificação de picos de consumo.  
+- Cálculo da autocorrelação para identificar padrões diários repetidos.  
+- Aplicação de **PCA** para redução de dimensionalidade.  
+- Visualização dos clusters K-Means no espaço PCA.  
+- Comparação entre modelos de **Regressão Linear** e **Regressão Polinomial** para modelar a relação entre `Global_active_power` e `Voltage`.  
+
+---
+
+## Parte 2 – Análise e Modelagem com *Energydata Complete*
+
+Nesta parte, foi utilizado o dataset **energydata_complete.csv**, que contém dados de consumo de eletrodomésticos (**Appliances**) e variáveis ambientais.  
+
+### Principais etapas:
+- Carregamento e inspeção inicial do dataset (tipos de dados e estatísticas descritivas).  
+- Análise da distribuição do consumo de `Appliances` (histogramas e séries temporais).  
+- Cálculo das correlações entre `Appliances` e variáveis ambientais.  
+- Normalização dos dados numéricos (Min-Max Scaling).  
+- Aplicação de **PCA** e análise da variância explicada.  
+- **Modelagem preditiva**:  
+  - Regressão Linear Múltipla.  
+  - Random Forest Regressor.  
+- **Clustering**: K-Means com perfis normalizados (`Appliances`, `T_out`, `RH_out`).  
+- **Classificação binária**:  
+  - Regressão Logística.  
+  - Random Forest Classifier.  
+  - Avaliação com matriz de confusão e relatório de classificação.  
+
+
+## Parte 3 --- Appliances Energy Prediction (Python)
 
 ### Dataset utilizado
 
@@ -40,7 +85,7 @@ tiveram dificuldade em prever altos consumos (classe minoritária).
 
 ------------------------------------------------------------------------
 
-## 📊 Parte 4 --- Household Power Consumption (Orange Data Mining)
+## Parte 4 --- Household Power Consumption (Orange Data Mining)
 ![Imagem Orange](https://github.com/raphatatto/cp4-iot/blob/main/img/imagem.jpg)
 ### Dataset utilizado
 
@@ -68,7 +113,7 @@ representam perfis distintos de consumo --- cozinha, aquecimento de
 
 ------------------------------------------------------------------------
 
-## ✅ Conclusão
+## Conclusão
 
 -   **Parte 3** mostrou que os modelos simples não explicam bem o
     consumo apenas com variáveis ambientais → seria necessário adicionar
