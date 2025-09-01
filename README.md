@@ -4,7 +4,7 @@
 
 Este repositório contém as atividades desenvolvidas no **Checkpoint 4**
 da disciplina, abordando análise de consumo energético doméstico
-utilizando **Python (Parte 3)** e **Orange Data Mining (Parte 4)**.
+utilizando **Python (Parte 1, 2 e 3)** e **Orange Data Mining (Parte 4)**.
 
 ------------------------------------------------------------------------
 
